@@ -13,14 +13,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #071422;
+    background-color: ${(props) => props.theme['base-background']};
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, textarea, button {
     font: 400 1rem sans-serif;
     line-height: 160%;
-    color: #AFC2D4;
+    color: ${(props) => props.theme['base-text']};
   }
 
   @media (max-width: 768px) {
