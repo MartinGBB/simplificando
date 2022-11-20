@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom"
+import { useParams } from 'react-router-dom'
 
-import { CartContainer } from "./styles";
-import { Loading } from "../../components/Loading";
+import { CartContainer } from './styles'
+import { Loading } from '../../components/Loading'
 
 export function StudentCard() {
   const { studentId } = useParams()

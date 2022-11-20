@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-import { CartContainer } from "./styles";
-
+import { CartContainer } from './styles'
 
 interface Student {
   name: string
@@ -15,7 +14,7 @@ interface StudentProps {
 
 export function Card({ student }: StudentProps) {
   const navigate = useNavigate()
-  
+
   function handleClick() {
     navigate(`/${student.id}`)
   }
