@@ -13,13 +13,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: black;
+    background: #071422;
     -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, textarea, button {
+    font: 400 1rem sans-serif;
+    line-height: 160%;
+    color: #AFC2D4;
   }
 
   @media (max-width: 768px) {
     html {
       font-size: 87.5%;
     }
-}
+  }
 `
