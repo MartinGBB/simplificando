@@ -1,28 +1,37 @@
+import { useEffect, useState } from 'react'
+
 import { HomeContainer } from './styles'
 import { Loading } from '../../components/Loading'
 import { Card } from './Card'
+import { fetchStudents } from '../../lib/fetchStudents'
+
+export interface Grades {
+  id: number
+  course: string
+  grade: number
+}
+
+export interface Student {
+  id: number
+  name: string
+  section: string
+  age: number
+  averageGrade: Grades[]
+}
 
 export function Home() {
-  const students = [
-    {
-      name: 'Pedro',
-      id: 111,
-      turma: 'A',
-    },
-    {
-      name: 'Maria',
-      turma: 'B',
-      id: 222,
-    },
-    {
-      name: 'Juan',
-      id: 333,
-      turma: 'C',
-    },
-  ]
+  const [students, setStudents] = useState<Student[]>([])
 
-  const isLoading = false
+  async function fetchApi() {
+    const response = await fetchStudents()
+    setStudents(response)
+  }
 
+  useEffect(() => {
+    fetchApi()
+  }, [])
+
+  const isLoading = !students
   if (isLoading) return <Loading />
 
   return (
