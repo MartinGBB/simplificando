@@ -1,0 +1,46 @@
+{
+  "students": [
+    { 
+      "id": 111,
+      "name": "Pedro",
+      "age": 22,
+      "section": "A",
+      "averageGrade": [
+        {"course": "Matemáticas", "grade": 100, "id": 1},
+        {"course": "Física", "grade": 63, "id": 2},
+        {"course": "Inglês", "grade": 83, "id": 3},
+        {"course": "Química", "grade": 34, "id": 4},
+        {"course": "Ciências", "grade": 64, "id": 5},
+        {"course": "História", "grade": 22, "id": 6}
+      ]
+    },
+    { 
+      "id": 222,
+      "name": "Maria",
+      "age": 24,
+      "section": "B",
+      "averageGrade": [ 
+        {"course": "Matemáticas", "grade": 33, "id": 1},
+        {"course": "Física", "grade": 62, "id": 2},
+        {"course": "Inglês", "grade": 12, "id": 3},
+        {"course": "Química", "grade": 44, "id": 4},
+        {"course": "Ciências", "grade": 55, "id": 5},
+        {"course": "História", "grade": 1, "id": 6}
+      ]
+    },
+    {
+      "id": 333,
+      "name": "Arthur",
+      "age": 24,
+      "section": "C",
+      "averageGrade": [ 
+        {"course": "Matemáticas", "grade": 67, "id": 1},
+        {"course": "Física", "grade": 55, "id": 2},
+        {"course": "Inglês", "grade": 53, "id": 3},
+        {"course": "Química", "grade": 50, "id": 4},
+        {"course": "Ciências", "grade": 43, "id": 5},
+        {"course": "História", "grade": 89, "id": 6}
+      ]
+    }
+  ]
+}
