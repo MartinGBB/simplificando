@@ -1,12 +1,7 @@
 import { useNavigate } from 'react-router-dom'
+import { Student } from '..'
 
 import { CartContainer } from './styles'
-
-interface Student {
-  name: string
-  id: number
-  turma: string
-}
 
 interface StudentProps {
   student: Student
@@ -20,9 +15,8 @@ export function Card({ student }: StudentProps) {
   }
 
   return (
-    <CartContainer>
-      <h1>{student.name}</h1>
-      <button onClick={handleClick}>{student.name}</button>
+    <CartContainer role={'button'} onClick={handleClick}>
+      <h2>{student.name}</h2>
     </CartContainer>
   )
 }
