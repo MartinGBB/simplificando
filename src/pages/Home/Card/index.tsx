@@ -15,10 +15,8 @@ export function Card({ student }: StudentProps) {
   }
 
   return (
-    <CartContainer>
-      <div role={'button'} onClick={handleClick}>
-        <h2>{student.name}</h2>
-      </div>
+    <CartContainer role={'button'} onClick={handleClick}>
+      <span>{student.name}</span>
     </CartContainer>
   )
 }

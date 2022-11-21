@@ -14,7 +14,6 @@ export const HomeContainer = styled.main`
     padding: 2.188rem 6.06rem;
 
     h1 {
-      margin-bottom: 2.188rem;
       font-weight: 400;
       font-size: 2.25rem;
     }
