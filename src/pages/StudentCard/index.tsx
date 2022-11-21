@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+} from 'recharts'
 
 import { CartContainer } from './styles'
 import { Loading } from '../../components/Loading'
@@ -32,6 +39,24 @@ export function StudentCard() {
       <h2>{`Nome: ${student.name}`}</h2>
       <p>{`Idade: ${student?.age}`}</p>
       <p>{`Turma ${student?.section}`}</p>
+
+      <RadarChart
+        height={500}
+        width={500}
+        outerRadius="70%"
+        data={student.averageGrade}
+      >
+        <PolarGrid />
+        <PolarAngleAxis dataKey="course" />
+        <PolarRadiusAxis domain={[0, 100]} axisLine={false} tick={false} />
+        <Radar
+          name={student.name}
+          dataKey="grade"
+          stroke="gray"
+          fill="gray"
+          fillOpacity={0.7}
+        />
+      </RadarChart>
 
       <table>
         <thead>
