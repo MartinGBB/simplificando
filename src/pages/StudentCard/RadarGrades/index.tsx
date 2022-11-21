@@ -13,7 +13,6 @@ interface GradesProps {
 }
 
 export function RadarGrades({ averageGrade, name }: GradesProps) {
-  console.log(averageGrade)
   return (
     <RadarChart height={500} width={500} outerRadius="70%" data={averageGrade}>
       <PolarGrid />
