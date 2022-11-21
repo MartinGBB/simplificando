@@ -1,4 +1,7 @@
 export const defaultTheme = {
-  'base-text': '#AFC2D4',
-  'base-background': '#071422',
+  'base-text': '#403937',
+  'base-background': '#EDEDED',
+
+  'green-300': '#B9B870',
+  'green-500': '#006344',
 } as const
