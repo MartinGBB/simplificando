@@ -36,9 +36,12 @@ export function Home() {
 
   return (
     <HomeContainer>
-      {students.map((student) => (
-        <Card key={student.id} student={student} />
-      ))}
+      <section>
+        <h1>Turma C</h1>
+        {students.map((student) => (
+          <Card key={student.id} student={student} />
+        ))}
+      </section>
     </HomeContainer>
   )
 }
