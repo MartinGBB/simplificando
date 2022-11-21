@@ -5,7 +5,7 @@ import { Loading } from '../../components/Loading'
 import { Card } from './Card'
 import { fetchStudents } from '../../lib/fetchStudents'
 
-interface Grades {
+export interface Grades {
   id: number
   course: string
   grade: number

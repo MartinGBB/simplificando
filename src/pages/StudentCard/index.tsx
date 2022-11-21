@@ -12,6 +12,7 @@ import { CartContainer } from './styles'
 import { Loading } from '../../components/Loading'
 import { fetchStudents } from '../../lib/fetchStudents'
 import { Student } from '../Home'
+import { TableGrades } from './TableGrades'
 
 export function StudentCard() {
   const [student, setStudent] = useState<Student>()
@@ -57,28 +58,7 @@ export function StudentCard() {
           fillOpacity={0.7}
         />
       </RadarChart>
-
-      <table>
-        <thead>
-          <tr>
-            <td>Notas</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Materia</td>
-            <td>Nota final</td>
-          </tr>
-          {student?.averageGrade.map((grade) => {
-            return (
-              <tr key={grade.id}>
-                <td>{grade.course}</td>
-                <td>{grade.grade}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <TableGrades averageGrade={student.averageGrade} />
       <button onClick={handleClick}>Voltar</button>
     </CartContainer>
   )
