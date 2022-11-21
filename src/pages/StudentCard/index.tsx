@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import { CartContainer } from './styles'
 import { Loading } from '../../components/Loading'
@@ -9,6 +9,12 @@ import { Student } from '../Home'
 export function StudentCard() {
   const [student, setStudent] = useState<Student>()
   const { studentId } = useParams()
+
+  const navigate = useNavigate()
+
+  function handleClick() {
+    navigate('/')
+  }
 
   useEffect(() => {
     async function fetchApi() {
@@ -23,9 +29,7 @@ export function StudentCard() {
 
   return (
     <CartContainer>
-      <h1>student description</h1>
-      <p>{studentId}</p>
-
+      <h2>{`Nome: ${student.name}`}</h2>
       <p>{`Idade: ${student?.age}`}</p>
       <p>{`Turma ${student?.section}`}</p>
 
@@ -50,6 +54,7 @@ export function StudentCard() {
           })}
         </tbody>
       </table>
+      <button onClick={handleClick}>Voltar</button>
     </CartContainer>
   )
 }
