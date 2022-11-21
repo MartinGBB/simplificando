@@ -16,6 +16,7 @@ export interface Student {
   name: string
   section: string
   age: number
+  avatar: string
   averageGrade: Grades[]
 }
 
