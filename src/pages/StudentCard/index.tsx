@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import {
-  Radar,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-} from 'recharts'
 
 import { CartContainer } from './styles'
 import { Loading } from '../../components/Loading'
 import { fetchStudents } from '../../lib/fetchStudents'
 import { Student } from '../Home'
 import { TableGrades } from './TableGrades'
+import { RadarGrades } from './RadarGrades'
 
 export function StudentCard() {
   const [student, setStudent] = useState<Student>()
@@ -41,23 +35,7 @@ export function StudentCard() {
       <p>{`Idade: ${student?.age}`}</p>
       <p>{`Turma ${student?.section}`}</p>
 
-      <RadarChart
-        height={500}
-        width={500}
-        outerRadius="70%"
-        data={student.averageGrade}
-      >
-        <PolarGrid />
-        <PolarAngleAxis dataKey="course" />
-        <PolarRadiusAxis domain={[0, 100]} axisLine={false} tick={false} />
-        <Radar
-          name={student.name}
-          dataKey="grade"
-          stroke="gray"
-          fill="gray"
-          fillOpacity={0.7}
-        />
-      </RadarChart>
+      <RadarGrades averageGrade={student.averageGrade} name={student.name} />
       <TableGrades averageGrade={student.averageGrade} />
       <button onClick={handleClick}>Voltar</button>
     </CartContainer>
