@@ -13,13 +13,12 @@ export function StudentCard() {
   useEffect(() => {
     async function fetchApi() {
       const response = await fetchStudents(studentId)
-      console.log(response[0])
       setStudent(response[0])
     }
     fetchApi()
   }, [studentId])
 
-  const isLoading = false
+  const isLoading = !student
   if (isLoading) return <Loading />
 
   return (

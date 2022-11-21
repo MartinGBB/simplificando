@@ -22,19 +22,6 @@ export interface Student {
 export function Home() {
   const [students, setStudents] = useState<Student[]>([])
 
-  // const fetchStudents = async (search?: string) => {
-  //   try {
-  //     const response = await api.get('students', {
-  //       params: {
-  //         q: search,
-  //       },
-  //     })
-  //     setStudents(response.data)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
   async function fetchApi() {
     const response = await fetchStudents()
     setStudents(response)
@@ -44,8 +31,7 @@ export function Home() {
     fetchApi()
   }, [])
 
-  const isLoading = false
-
+  const isLoading = !students
   if (isLoading) return <Loading />
 
   return (
