@@ -11,5 +11,12 @@ export const HomeContainer = styled.main`
     background: ${(props) => props.theme.white};
     height: 80vh;
     margin-bottom: 51px;
+    padding: 2.188rem 6.06rem;
+
+    h1 {
+      margin-bottom: 2.188rem;
+      font-weight: 400;
+      font-size: 2.25rem;
+    }
   }
 `
