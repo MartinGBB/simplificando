@@ -32,6 +32,8 @@ export function StudentCard() {
   return (
     <CartContainer>
       <ProfileInfo>
+        <button onClick={handleClick}>Voltar</button>
+
         <h2>{`Nome: ${student.name}`}</h2>
         <p>{`Idade: ${student?.age}`}</p>
         <p>{`Turma ${student?.section}`}</p>
@@ -40,7 +42,6 @@ export function StudentCard() {
         <RadarGrades averageGrade={student.averageGrade} name={student.name} />
         <TableGrades averageGrade={student.averageGrade} />
       </GradesContent>
-      <button onClick={handleClick}>Voltar</button>
     </CartContainer>
   )
 }
