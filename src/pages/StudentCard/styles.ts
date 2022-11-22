@@ -32,6 +32,15 @@ export const ProfileInfo = styled.section`
   div {
     display: flex;
     flex-direction: column;
+
+    span {
+      font-weight: 400;
+      font-size: 2.25rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
   }
 
   background: ${(props) => props.theme.white};
