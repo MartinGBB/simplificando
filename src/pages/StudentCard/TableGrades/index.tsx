@@ -1,5 +1,5 @@
 import { Grades } from '../../Home'
-import { TableContainer } from './styles'
+import { TableContainer, TitleTableAndGrades } from './styles'
 
 interface GradesProps {
   averageGrade: Grades[]
@@ -8,21 +8,16 @@ interface GradesProps {
 export function TableGrades({ averageGrade }: GradesProps) {
   return (
     <TableContainer>
-      <thead>
-        <tr>
-          <td>Notas</td>
-        </tr>
-      </thead>
       <tbody>
         <tr>
-          <td>Materia</td>
-          <td>Nota final</td>
+          <TitleTableAndGrades>Materías</TitleTableAndGrades>
+          <TitleTableAndGrades>Notas</TitleTableAndGrades>
         </tr>
         {averageGrade.map((grade) => {
           return (
             <tr key={grade.id}>
               <td>{grade.course}</td>
-              <td>{grade.grade}</td>
+              <TitleTableAndGrades>{grade.grade}</TitleTableAndGrades>
             </tr>
           )
         })}

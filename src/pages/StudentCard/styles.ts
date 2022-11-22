@@ -9,6 +9,7 @@ export const CartContainer = styled.main`
   margin: 0 auto;
   width: 100%;
   border-radius: 5px;
+  margin-bottom: 3rem;
 `
 
 export const ReturnPage = styled.section`
@@ -64,7 +65,7 @@ export const GradesContent = styled.section`
     padding: 2rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     display: flex;
     justify-content: center;
