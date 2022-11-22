@@ -21,3 +21,21 @@ export const ProfileContent = styled.section`
   align-items: center;
   gap: 1.25rem;
 `
+export const LogoContent = styled.section`
+  display: flex;
+  align-items: center;
+
+  & img:first-child {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    & img:last-child {
+      display: none;
+    }
+
+    & img:first-child {
+      display: flex;
+    }
+  }
+`
