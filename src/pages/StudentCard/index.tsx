@@ -31,17 +31,20 @@ export function StudentCard() {
 
   return (
     <CartContainer>
-      <ProfileInfo>
-        <ReturnPage>
-          <button onClick={handleClick}>Turma</button>
-          <span>{` > `}</span>
-          <span>Estudante</span>
-        </ReturnPage>
+      <ReturnPage>
+        <button onClick={handleClick}>Turma</button>
+        <span>{` > `}</span>
+        <span>Estudante</span>
+      </ReturnPage>
 
-        <h2>{`Nome: ${student.name}`}</h2>
-        <p>{`Idade: ${student?.age}`}</p>
-        <p>{`Turma ${student?.section}`}</p>
+      <ProfileInfo>
+        <img src={student.avatar} alt="" />
+        <div>
+          <span>{student.name}</span>
+          <p>{`${student?.age} anos`}</p>
+        </div>
       </ProfileInfo>
+
       <GradesContent>
         <RadarGrades averageGrade={student.averageGrade} name={student.name} />
         <TableGrades averageGrade={student.averageGrade} />

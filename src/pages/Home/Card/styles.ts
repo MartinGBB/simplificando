@@ -39,10 +39,10 @@ export const StudentContent = styled.section`
   }
 
   img {
-    min-width: 60px;
-    min-height: 60px;
-    width: 60px;
-    height: 60px;
+    min-width: 3.75rem;
+    min-height: 3.75rem;
+    width: 3.75rem;
+    height: 3.75rem;
     object-fit: cover;
     border-radius: 100%;
     margin-right: 1.56rem;
