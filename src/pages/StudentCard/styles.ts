@@ -40,6 +40,9 @@ export const ProfileInfo = styled.section`
 
     p {
       font-size: 1.25rem;
+      & strong {
+        font-weight: 400;
+      }
     }
   }
 

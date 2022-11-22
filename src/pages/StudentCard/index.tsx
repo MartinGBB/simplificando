@@ -41,7 +41,10 @@ export function StudentCard() {
         <img src={student.avatar} alt="" />
         <div>
           <span>{student.name}</span>
-          <p>{`${student?.age} anos`}</p>
+          <p>{`${student.age} anos`}</p>
+          <p>
+            Nota final:<strong>{` ${student.finalGrade}`}</strong>
+          </p>
         </div>
       </ProfileInfo>
 

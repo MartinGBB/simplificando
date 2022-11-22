@@ -18,6 +18,7 @@ export interface Student {
   age: number
   avatar: string
   averageGrade: Grades[]
+  finalGrade: number
 }
 
 export function Home() {

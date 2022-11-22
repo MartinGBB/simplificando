@@ -20,7 +20,7 @@ export function Card({ student }: StudentProps) {
         <img src={student.avatar} alt={student.name} />
         <span>{student.name}</span>
       </StudentContent>
-      <span>100 pts</span>
+      <span>{student.finalGrade}</span>
     </CartContainer>
   )
 }

@@ -15,6 +15,10 @@ export const CartContainer = styled.section`
   cursor: pointer;
   border-radius: 5px;
 
+  > span {
+    font-weight: 400;
+  }
+
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
