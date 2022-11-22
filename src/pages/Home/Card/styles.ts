@@ -17,12 +17,30 @@ export const CartContainer = styled.section`
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+
+  @media (max-width: 615px) {
+    padding: 0.3125rem;
+
+    > span {
+      display: none;
+    }
+  }
 `
 export const StudentContent = styled.section`
   display: flex;
   align-items: center;
+  overflow: hidden;
+
+  @media (max-width: 615px) {
+    > span {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
 
   img {
+    min-width: 60px;
+    min-height: 60px;
     width: 60px;
     height: 60px;
     object-fit: cover;

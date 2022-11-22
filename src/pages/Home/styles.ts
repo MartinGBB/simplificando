@@ -10,12 +10,16 @@ export const HomeContainer = styled.main`
   > section {
     background: ${(props) => props.theme.white};
     height: 80vh;
-    margin-bottom: 51px;
+    margin-bottom: 3.125rem;
     padding: 2.188rem 6.06rem;
 
     h1 {
       font-weight: 400;
       font-size: 2.25rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 2.188rem;
     }
   }
 `
