@@ -17,7 +17,7 @@ export function RadarGrades({ averageGrade, name }: GradesProps) {
   return (
     <RadarContainer>
       <RadarChart
-        height={500}
+        height={480}
         width={500}
         outerRadius="70%"
         data={averageGrade}
