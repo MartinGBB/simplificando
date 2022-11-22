@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { Student } from '..'
 
-import { CartContainer } from './styles'
+import { CartContainer, StudentContent } from './styles'
 
 interface StudentProps {
   student: Student
@@ -16,7 +16,11 @@ export function Card({ student }: StudentProps) {
 
   return (
     <CartContainer role={'button'} onClick={handleClick}>
-      <h2>{student.name}</h2>
+      <StudentContent>
+        <img src={student.avatar} alt={student.name} />
+        <span>{student.name}</span>
+      </StudentContent>
+      <span>{student.finalGrade}</span>
     </CartContainer>
   )
 }

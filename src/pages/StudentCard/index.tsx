@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-import { CartContainer } from './styles'
+import { CartContainer, GradesContent, ProfileInfo, ReturnPage } from './styles'
 import { Loading } from '../../components/Loading'
 import { fetchStudents } from '../../lib/fetchStudents'
 import { Student } from '../Home'
@@ -31,13 +31,27 @@ export function StudentCard() {
 
   return (
     <CartContainer>
-      <h2>{`Nome: ${student.name}`}</h2>
-      <p>{`Idade: ${student?.age}`}</p>
-      <p>{`Turma ${student?.section}`}</p>
+      <ReturnPage>
+        <button onClick={handleClick}>Turma</button>
+        <span>{` > `}</span>
+        <span>Estudante</span>
+      </ReturnPage>
 
-      <RadarGrades averageGrade={student.averageGrade} name={student.name} />
-      <TableGrades averageGrade={student.averageGrade} />
-      <button onClick={handleClick}>Voltar</button>
+      <ProfileInfo>
+        <img src={student.avatar} alt="" />
+        <div>
+          <span>{student.name}</span>
+          <p>{`${student.age} anos`}</p>
+          <p>
+            Nota final:<strong>{` ${student.finalGrade}`}</strong>
+          </p>
+        </div>
+      </ProfileInfo>
+
+      <GradesContent>
+        <RadarGrades averageGrade={student.averageGrade} name={student.name} />
+        <TableGrades averageGrade={student.averageGrade} />
+      </GradesContent>
     </CartContainer>
   )
 }

@@ -16,7 +16,9 @@ export interface Student {
   name: string
   section: string
   age: number
+  avatar: string
   averageGrade: Grades[]
+  finalGrade: number
 }
 
 export function Home() {
@@ -36,9 +38,12 @@ export function Home() {
 
   return (
     <HomeContainer>
-      {students.map((student) => (
-        <Card key={student.id} student={student} />
-      ))}
+      <section>
+        <h1>Turma C</h1>
+        {students.map((student) => (
+          <Card key={student.id} student={student} />
+        ))}
+      </section>
     </HomeContainer>
   )
 }
