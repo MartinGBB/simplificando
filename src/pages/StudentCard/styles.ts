@@ -54,6 +54,7 @@ export const ProfileInfo = styled.section`
 export const GradesContent = styled.section`
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   margin: 0;
 
   background: ${(props) => props.theme.white};
@@ -62,8 +63,6 @@ export const GradesContent = styled.section`
   @media (max-width: 615px) {
     padding: 2rem;
   }
-
-  gap: 1rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
