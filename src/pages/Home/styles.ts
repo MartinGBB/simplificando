@@ -16,6 +16,7 @@ export const HomeContainer = styled.main`
     h1 {
       font-weight: 400;
       font-size: 2.25rem;
+      margin-bottom: 1.5rem;
     }
 
     @media (max-width: 768px) {

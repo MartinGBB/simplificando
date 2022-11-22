@@ -8,18 +8,19 @@ export const CartContainer = styled.section`
   justify-content: space-between;
   align-items: center;
 
-  margin: 2.188rem 0;
-  padding: 0.3125rem;
+  margin: 1rem 0;
+  padding: 0.4rem;
   padding-right: 2.5rem;
   font-size: 1.5rem;
   cursor: pointer;
+  border-radius: 5px;
 
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   @media (max-width: 615px) {
-    padding: 0.3125rem;
+    padding: 0.4rem;
 
     > span {
       display: none;
