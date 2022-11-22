@@ -6,7 +6,6 @@ interface GradesProps {
 }
 
 export function TableGrades({ averageGrade }: GradesProps) {
-  console.log(averageGrade)
   return (
     <TableContainer>
       <thead>

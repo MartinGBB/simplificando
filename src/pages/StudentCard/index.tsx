@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-import { CartContainer, GradesContent, ProfileInfo } from './styles'
+import { CartContainer, GradesContent, ProfileInfo, ReturnPage } from './styles'
 import { Loading } from '../../components/Loading'
 import { fetchStudents } from '../../lib/fetchStudents'
 import { Student } from '../Home'
@@ -32,7 +32,11 @@ export function StudentCard() {
   return (
     <CartContainer>
       <ProfileInfo>
-        <button onClick={handleClick}>Voltar</button>
+        <ReturnPage>
+          <button onClick={handleClick}>Turma</button>
+          <span>{` > `}</span>
+          <span>Estudante</span>
+        </ReturnPage>
 
         <h2>{`Nome: ${student.name}`}</h2>
         <p>{`Idade: ${student?.age}`}</p>
