@@ -19,6 +19,10 @@ export const ReturnPage = styled.section`
     border: none;
     cursor: pointer;
 
+    &:hover {
+      text-decoration: 1px underline;
+    }
+
     &:focus {
       box-shadow: none;
     }
@@ -49,10 +53,6 @@ export const ProfileInfo = styled.section`
   background: ${(props) => props.theme.white};
   padding: 3.8125rem 6rem;
 
-  @media (max-width: 615px) {
-    padding: 2rem;
-  }
-
   img {
     min-width: 9.875rem;
     min-height: 9.875rem;
@@ -62,13 +62,30 @@ export const ProfileInfo = styled.section`
     border-radius: 100%;
     margin-right: 1.56rem;
   }
+
+  @media (max-width: 615px) {
+    padding: 2rem;
+    flex-direction: column;
+
+    img {
+      margin: 0 0 1rem 0;
+    }
+
+    div {
+      display: flex;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
 `
 
 export const GradesContent = styled.section`
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
 
   background: ${(props) => props.theme.white};
   padding: 3.8125rem 6rem;
