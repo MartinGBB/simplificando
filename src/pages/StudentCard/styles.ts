@@ -85,7 +85,6 @@ export const GradesContent = styled.section`
   gap: 1rem;
   width: 100%;
   margin: 0 auto;
-  justify-content: center;
 
   background: ${(props) => props.theme.white};
   padding: 3.8125rem 6rem;
