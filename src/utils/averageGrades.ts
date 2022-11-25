@@ -1,15 +1,19 @@
-import { Student } from '../pages/Home'
+import { Grades, Student } from '../pages/Home'
 
-function average(allGrades) {
+interface CoursesGrades {
+  grade: Grades
+}
+
+function average(allGrades: number[]) {
   const gradesQuantity = allGrades.length
 
-  const sum = allGrades.reduce((acc, curr) => (acc += curr), 0)
+  const sum = allGrades.reduce((acc: number, curr: number) => (acc += curr), 0)
   const totalAverage = sum / gradesQuantity
   return totalAverage
 }
 
-function separateGrades(courses) {
-  const findAllGrades = courses[0].map(({ grade }) => grade)
+function separateGrades(courses: any) {
+  const findAllGrades = courses[0].map(({ grade }: CoursesGrades) => grade)
   average(findAllGrades)
 }
 
