@@ -4,7 +4,6 @@ export const fetchStudents = async (search?: string) => {
   try {
     if (search) {
       const response = await api.get(`alunos/${search}`)
-      console.log(response.data)
       return response.data
     }
 

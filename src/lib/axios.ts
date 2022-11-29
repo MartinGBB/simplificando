@@ -1,5 +1,6 @@
 import axios from 'axios'
+import { VITE_URL } from '../utils/envConfig'
 
 export const api = axios.create({
-  baseURL: 'http://localhost:8080',
+  baseURL: VITE_URL,
 })
