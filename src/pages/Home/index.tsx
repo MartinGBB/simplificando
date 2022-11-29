@@ -9,6 +9,7 @@ export interface Grades {
   id: number
   course: string
   grade: number
+  studentId: number
 }
 
 export interface Student {
