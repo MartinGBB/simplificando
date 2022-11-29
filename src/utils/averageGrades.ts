@@ -16,12 +16,3 @@ export function averageGrades(courses: any) {
   const findAllGrades = courses.map(({ grade }: CoursesGrades) => grade)
   return average(findAllGrades)
 }
-
-// export function averageGrades(grades) {
-//   const courses = listStudents.map(({ alunoNota }) =>
-//     alunoNota.filter((grade) => grade.id === studentId),
-//   )
-
-//   const findGrades = courses.filter((course) => course.length > 1)
-//   separateGrades(findGrades)
-// }
