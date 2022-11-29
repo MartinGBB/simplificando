@@ -7,6 +7,7 @@ import { fetchStudents } from '../../lib/fetchStudents'
 import { Student } from '../Home'
 import { TableGrades } from './TableGrades'
 import { RadarGrades } from './RadarGrades'
+import { averageGrades } from '../../utils/averageGrades'
 
 export function StudentCard() {
   const [student, setStudent] = useState<Student>()
@@ -41,7 +42,9 @@ export function StudentCard() {
         <div>
           <span>{student.nome}</span>
           <p>{`${student.idade} anos`}</p>
-          <p>{/* Nota final:<strong>{` ${student.finalGrade}`}</strong> */}</p>
+          <p>
+            Nota final:<strong>{` ${averageGrades(student.alunoNota)}`}</strong>
+          </p>
         </div>
       </ProfileInfo>
 
