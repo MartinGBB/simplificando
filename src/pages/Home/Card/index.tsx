@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Student } from '..'
+import { averageGrades } from '../../../utils/averageGrades'
 
 import { CartContainer, StudentContent } from './styles'
 
@@ -17,10 +18,10 @@ export function Card({ student }: StudentProps) {
   return (
     <CartContainer role={'button'} onClick={handleClick}>
       <StudentContent>
-        <img src={student.avatar} alt={student.name} />
-        <span>{student.name}</span>
+        <img src={student.urlAvatar} alt={student.nome} />
+        <span>{student.nome}</span>
       </StudentContent>
-      <span>{student.finalGrade}</span>
+      <span>{averageGrades(student.alunoNota)}</span>
     </CartContainer>
   )
 }

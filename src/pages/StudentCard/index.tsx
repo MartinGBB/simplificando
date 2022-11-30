@@ -7,6 +7,7 @@ import { fetchStudents } from '../../lib/fetchStudents'
 import { Student } from '../Home'
 import { TableGrades } from './TableGrades'
 import { RadarGrades } from './RadarGrades'
+import { averageGrades } from '../../utils/averageGrades'
 
 export function StudentCard() {
   const [student, setStudent] = useState<Student>()
@@ -28,7 +29,6 @@ export function StudentCard() {
 
   const isLoading = !student
   if (isLoading) return <Loading />
-
   return (
     <CartContainer>
       <ReturnPage>
@@ -38,19 +38,19 @@ export function StudentCard() {
       </ReturnPage>
 
       <ProfileInfo>
-        <img src={student.avatar} alt="" />
+        <img src={student.urlAvatar} alt="" />
         <div>
-          <span>{student.name}</span>
-          <p>{`${student.age} anos`}</p>
+          <span>{student.nome}</span>
+          <p>{`${student.idade} anos`}</p>
           <p>
-            Nota final:<strong>{` ${student.finalGrade}`}</strong>
+            Nota final:<strong>{` ${averageGrades(student.alunoNota)}`}</strong>
           </p>
         </div>
       </ProfileInfo>
 
       <GradesContent>
-        <RadarGrades averageGrade={student.averageGrade} name={student.name} />
-        <TableGrades averageGrade={student.averageGrade} />
+        <RadarGrades averageGrade={student.alunoNota} name={student.nome} />
+        <TableGrades averageGrade={student.alunoNota} />
       </GradesContent>
     </CartContainer>
   )
