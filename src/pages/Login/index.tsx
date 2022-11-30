@@ -1,13 +1,17 @@
+import { useContext } from 'react'
+import { AuthContext } from '../../Context/Auth.Context'
 import { LoginContainer } from './styles'
 
 export function Login() {
-  function handleLogin() {
-    console.log('login')
+  const { handleLogin } = useContext(AuthContext)
+
+  function handleClick() {
+    handleLogin()
   }
 
   return (
     <LoginContainer>
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleClick}>Login</button>
     </LoginContainer>
   )
 }
