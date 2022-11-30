@@ -17,8 +17,6 @@ export interface Student {
   idade: number
   urlAvatar: string
   alunoNota: Grades[]
-  // section: string
-  // finalGrade: number
 }
 
 export function Home() {
