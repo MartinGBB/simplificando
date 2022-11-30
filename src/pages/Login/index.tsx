@@ -1,6 +1,6 @@
 import { LoginContainer } from './styles'
 
-export function SearchForm() {
+export function Login() {
   return (
     <LoginContainer>
       <h1>Login</h1>

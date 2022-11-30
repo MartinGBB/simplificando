@@ -12,7 +12,7 @@ export function Card({ student }: StudentProps) {
   const navigate = useNavigate()
 
   function handleClick() {
-    navigate(`/${student.id}`)
+    navigate(`student/${student.id}`)
   }
 
   return (

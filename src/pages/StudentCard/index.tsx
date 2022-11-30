@@ -16,7 +16,7 @@ export function StudentCard() {
   const navigate = useNavigate()
 
   function handleClick() {
-    navigate('/')
+    navigate('/home')
   }
 
   useEffect(() => {
