@@ -1,9 +1,13 @@
 import { LoginContainer } from './styles'
 
 export function Login() {
+  function handleLogin() {
+    console.log('login')
+  }
+
   return (
     <LoginContainer>
-      <h1>Login</h1>
+      <button onClick={handleLogin}>Login</button>
     </LoginContainer>
   )
 }
