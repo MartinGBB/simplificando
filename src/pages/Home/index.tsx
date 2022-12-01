@@ -9,7 +9,6 @@ export interface Grades {
   id: number
   course: string
   grade: number
-  studentId: number
 }
 
 export interface Student {
@@ -18,8 +17,6 @@ export interface Student {
   idade: number
   urlAvatar: string
   alunoNota: Grades[]
-  // section: string
-  // finalGrade: number
 }
 
 export function Home() {

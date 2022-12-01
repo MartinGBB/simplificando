@@ -1,6 +1,5 @@
 import { Grades } from '../pages/Home'
 
-
 interface CoursesGrades {
   grade: Grades
 }
