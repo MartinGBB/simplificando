@@ -11,6 +11,10 @@ export const HeaderContainer = styled.header`
     max-width: 1140px;
     margin: 0 auto;
 
+    // invertir ordem para posicionar modal
+    position: relative;
+    flex-direction: row-reverse;
+
     display: flex;
     justify-content: space-between;
   }
@@ -21,6 +25,18 @@ export const ProfileContent = styled.section`
   align-items: center;
   gap: 1.25rem;
 `
+
+export const ProfileOptions = styled.button`
+  background: transparent;
+  border: none;
+  line-height: 0;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: none;
+  }
+`
+
 export const LogoContent = styled.section`
   display: flex;
   align-items: center;
