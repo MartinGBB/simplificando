@@ -8,12 +8,17 @@ export function OptionsProfile() {
     localStorage.removeItem('@simplificando:auth-user-token-1.0.0')
     navigate('/login')
   }
+
+  function handleProfile() {
+    alert('Em processo de implementação')
+  }
+
   return (
     <OptionsProfileContainer>
       <Triangle />
       <ButtonContent>
         <li>
-          <button>Meu perfil</button>
+          <button onClick={handleProfile}>Meu perfil</button>
         </li>
         <li>
           <button onClick={handleLogout}>Sair</button>
