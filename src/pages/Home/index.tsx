@@ -13,10 +13,10 @@ export interface Grades {
 
 export interface Student {
   id: number
-  nome: string
-  idade: number
-  urlAvatar: string
-  alunoNota: Grades[]
+  name: string
+  age: number
+  avatar: string
+  averageGrade: Grades[]
 }
 
 export function Home() {

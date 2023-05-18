@@ -38,19 +38,20 @@ export function StudentCard() {
       </ReturnPage>
 
       <ProfileInfo>
-        <img src={student.urlAvatar} alt="" />
+        <img src={student.avatar} alt="" />
         <div>
-          <span>{student.nome}</span>
-          <p>{`${student.idade} anos`}</p>
+          <span>{student.name}</span>
+          <p>{`${student.age} anos`}</p>
           <p>
-            Nota final:<strong>{` ${averageGrades(student.alunoNota)}`}</strong>
+            Nota final:{' '}
+            <strong>{` ${averageGrades(student.averageGrade)}`}</strong>
           </p>
         </div>
       </ProfileInfo>
 
       <GradesContent>
-        <RadarGrades averageGrade={student.alunoNota} name={student.nome} />
-        <TableGrades averageGrade={student.alunoNota} />
+        <RadarGrades averageGrade={student.averageGrade} name={student.name} />
+        <TableGrades averageGrade={student.averageGrade} />
       </GradesContent>
     </CartContainer>
   )

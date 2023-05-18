@@ -18,10 +18,10 @@ export function Card({ student }: StudentProps) {
   return (
     <CartContainer role={'button'} onClick={handleClick}>
       <StudentContent>
-        <img src={student.urlAvatar} alt={student.nome} />
-        <span>{student.nome}</span>
+        <img src={student.avatar} alt={student.name} />
+        <span>{student.name}</span>
       </StudentContent>
-      <span>{averageGrades(student.alunoNota)}</span>
+      <span>{averageGrades(student.averageGrade)}</span>
     </CartContainer>
   )
 }
