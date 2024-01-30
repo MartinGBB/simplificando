@@ -4,7 +4,11 @@ import { LoadingContainer } from './styles'
 export function Loading() {
   return (
     <LoadingContainer>
-      <ReactLoading type="spinningBubbles" color="white" />
+      <ReactLoading
+        data-testid="loading"
+        type="spinningBubbles"
+        color="white"
+      />
     </LoadingContainer>
   )
 }

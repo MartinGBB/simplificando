@@ -12,3 +12,7 @@ export const fetchStudents = async (search?: string) => {
     console.log(error)
   }
 }
+
+export function mockResolvedValueOnce(arg0: any[]) {
+  throw new Error('Function not implemented.')
+}
